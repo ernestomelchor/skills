@@ -62,20 +62,96 @@ console.log(numberPlusSeven([1, 2, 3]));
 // #  5. Start with an array of strings and create a new array with each string's length.
 // #     For example, ["hello", "goodbye"] becomes [5, 7].
 
+function getStringLength(strings) {
+  let result = [];
+  for (let i = 0; i < strings.length; ++i) {
+    let string = strings[i];
+    result.push(string.length);
+  }
+  return result;
+}
+
+console.log(getStringLength(["hello", "goodbye"]));
+
 // #  6. Start with an array of hashes and create a new array of number values from each hash's :age key.
 // #     For example, [{name: "Alice", age: 27}, {name: "Blane", age: 16}] becomes [27, 16].
+
+function getAges(people) {
+  let ages = [];
+  for (let i = 0; i < people.length; ++i) {
+    let person = people[i];
+    ages.push(person["age"]);
+  }
+  return ages;
+}
+
+console.log(
+  getAges([
+    { name: "Alice", age: 27 },
+    { name: "Blane", age: 16 },
+  ])
+);
 
 // #  7. Start with an array of numbers and create a new array with each number divided by 2.
 // #     For example, [1, 2, 3] becomes [0.5, 1.0, 1.5].
 
+function divideByTwo(numbers) {
+  let divisions = [];
+  for (let i = 0; i < numbers.length; ++i) {
+    let number = numbers[i];
+    divisions.push(number / 2);
+  }
+  return divisions;
+}
+
+console.log(divideByTwo([1, 2, 3]));
+
 // #  8. Start with an array of strings and create a new array with each string's first letter only.
 // #     For example, ["hello", "goodbye"] becomes ["h", "g"].
+
+function getFirstLetter(strings) {
+  let firstLetters = [];
+  for (let i = 0; i < strings.length; ++i) {
+    let string = strings[i];
+    firstLetters.push(string[0]);
+  }
+  return firstLetters;
+}
+
+console.log(getFirstLetter(["hello", "goodbye"]));
 
 // # 9.  Start with an array of hashes and create a new array of number values from each hash's :age key times 2.
 // #     For example, [{name: "Alice", age: 27}, {name: "Blane", age: 16}] becomes [54, 32].
 
+function changeAges(people) {
+  let ages = [];
+  for (let i = 0; i < people.length; ++i) {
+    let person = people[i];
+    ages.push(person["age"] * 2);
+  }
+  return ages;
+}
+
+console.log(
+  changeAges([
+    { name: "Alice", age: 27 },
+    { name: "Blane", age: 16 },
+  ])
+);
+
 // # 10. Start with an array of numbers and create a new array with each number converted into a string.
 // #     For example, [1, 2, 3] becomes ["1", "2", "3"].
+
+function numbersToStrings(numbers) {
+  let strings = [];
+  for (let i = 0; i < numbers.length; ++i) {
+    let number = numbers[i];
+    strings.push(number.toString());
+  }
+  return strings;
+}
+
+console.log(numbersToStrings([1, 2, 3]));
 
 // # SOLUTIONS (using while loop): https://gist.github.com/peterxjang/b9ac4390aad2301a2238efc95c904f3d
 // # SOLUTIONS (using .each shortcut): https://gist.github.com/peterxjang/66598fd7cdbc67fe663624e217cebbaf
