@@ -1,14 +1,5 @@
-function reverseString(name) {
-  let result = "";
-  for (let i = name.length - 1; i >= 0; --i) {
-    let character = name[i];
-    result += character;
-  }
-  return result;
-}
-console.log(reverseString("Ernesto"));
-
 function getIkeaName(name) {
+  name = reverseString(name);
   let ikeaName = "";
   let vowels = {
     a: "ä",
@@ -19,13 +10,23 @@ function getIkeaName(name) {
   };
   for (let i = 0; i < name.length; ++i) {
     let character = name[i];
-    if (!vowels.keys.includes(character)) {
-      ikeaName += character;
-    } else {
-      ikeaName += vowels.values;
-    }
+    Object.keys(vowels).forEach((key) => {
+      let value = vowels[key];
+      if (key.includes(character)) {
+        ikeaName += name.replace(character, value);
+      }
+    });
   }
   return ikeaName;
 }
 
-console.log(getIkeaName("otsenrE"));
+function reverseString(name) {
+  let result = "";
+  for (let i = name.length - 1; i >= 0; --i) {
+    let character = name[i];
+    result += character;
+  }
+  return result;
+}
+
+console.log(getIkeaName("Ernesto"));
