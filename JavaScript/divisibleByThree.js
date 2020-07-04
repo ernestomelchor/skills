@@ -19,3 +19,17 @@ console.log(divisibleByThree("88")); // false
 console.log(divisibleByThree("1")); // false
 console.log(divisibleByThree("66")); // true
 console.log(divisibleByThree("5129522473139170925478270")); // true
+
+// What if you wanted to use the .reduce() method for the problem above?
+console.log("Using the .reduce() method.");
+
+function divisibleBy3(str) {
+  return [...str].reduce((a, c) => +c + a, 0) % 3 === 0;
+}
+
+console.log(divisibleBy3("123")); // true
+console.log(divisibleBy3("19254")); // true
+console.log(divisibleBy3("88")); // false
+console.log(divisibleBy3("1")); // false
+console.log(divisibleBy3("66")); // true
+console.log(divisibleBy3("5129522473139170925478270")); // true
