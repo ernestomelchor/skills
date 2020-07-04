@@ -16,7 +16,7 @@ function instances(array) {
 console.log(instances([3, 4, 3, 2, 3, 1, 3, 3]));
 // Result should be { '1': 1, '2': 1, '3': 5, '4': 1 }
 
-// Return the dominator value, i.e. the number that appears in more than half of the elements in array above. If there is no dominator, return -1.
+// Return the dominator value, i.e. the number that appears in more than half of the elements in the array below. If there is no dominator, return -1.
 
 function dominator(arr) {
   // First tally up the instances of each number in the array
@@ -37,6 +37,7 @@ function dominator(arr) {
     let value = result[key];
     // If the value pair is greater than the length of the array divided by 2, then that value pair becomes the dominator
     if (value > arr.length / 2) {
+      // Convert key to a number data type because keys are stored as strings in objects.
       dominator = Number(key);
     }
   }
@@ -45,4 +46,4 @@ function dominator(arr) {
 }
 
 console.log(dominator([3, 4, 3, 2, 3, 1, 3, 3]));
-// In this case, you would return 3 because it appears 5 times, which is more than half of the elements in arr (i.e. 4).
+// In this case, you should return 3 because it appears 5 times, which is more than half of the elements in the array, i.e. 4.
