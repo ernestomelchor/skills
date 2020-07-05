@@ -40,16 +40,18 @@ console.log(
 // 3. Convert a string into a hash with keys for each letter in the string and values for the number of times the letter appears in the string.
 //    For example, "bookkeeper" becomes {"b" => 1, "o" => 2, "k" => 2, "e" => 3, "p" => 1, "r" => 1}.
 
-// This is wrong
 function stringToHash(string) {
   let result = {};
   let count = 1;
   for (let i = 0; i < string.length; ++i) {
     let currentCharacter = string[i];
+    // If result object does not have this property/key...
     if (!result.hasOwnProperty(currentCharacter)) {
+      // Create it and add 1 to the count
       result[currentCharacter] = count;
     } else {
-      count++;
+      // Otherwise, add to the count
+      result[currentCharacter]++;
     }
   }
   return result;
