@@ -15,5 +15,5 @@ def modified_sum(a, n)
   return result
 end
 
-p modifiedSum([1, 2, 3], 3) #30
-p modifiedSum([1, 2], 5) #30
+p modified_sum([1, 2, 3], 3) #30
+p modified_sum([1, 2], 5) #30
