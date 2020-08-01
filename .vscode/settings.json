@@ -1,3 +1,5 @@
 {
-  "python.pythonPath": "/usr/local/opt/python@3.8/bin/python3.8"
+  "python.pythonPath": "/usr/local/opt/python@3.8/bin/python3.8",
+  "prettier.jsxSingleQuote": true,
+  "prettier.singleQuote": true
 }
