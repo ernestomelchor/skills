@@ -6,12 +6,12 @@
 
 #Example 2: Input: {1, 2}, 5 --> (1 ^ 5 + 2 ^ 5) - (1 + 2) --> 33 - 3 --> Output: 30
 
-def modifiedSum(a, n)
+def modified_sum(a, n)
   #Write your code here
   power = a.map { |val| val ** n }
-  powerSum = power.reduce(:+)
+  power_sum = power.reduce(:+)
   addition = a.reduce(:+)
-  result = powerSum - addition
+  result = power_sum - addition
   return result
 end
 
