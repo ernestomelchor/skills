@@ -10,9 +10,7 @@ function modifiedSum(a, n) {
   // Write your code here
   let power = a.map((val) => Math.pow(val, n));
   let powerSum = power.reduce((a, b) => a + b, 0);
-  console.log(powerSum);
   let addition = a.reduce((a, b) => a + b, 0);
-  console.log(addition);
   let result = powerSum - addition;
   return result;
 }

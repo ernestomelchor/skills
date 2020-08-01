@@ -10,9 +10,7 @@ def modifiedSum(a, n)
   #Write your code here
   power = a.map { |val| val ** n }
   powerSum = power.reduce(:+)
-  p powerSum
   addition = a.reduce(:+)
-  p addition
   result = powerSum - addition
   return result
 end
