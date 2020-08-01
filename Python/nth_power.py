@@ -19,5 +19,5 @@ def modifiedSum(a, n):
     return result
 
 
-print(modifiedSum([1, 2, 3], 3))  # 30
-print(modifiedSum([1, 2], 5))  # 30
+print(modifiedSum([1, 2, 3], 3))  # 30.0
+print(modifiedSum([1, 2], 5))  # 30.0
