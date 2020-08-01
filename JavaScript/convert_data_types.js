@@ -143,11 +143,11 @@ console.log(hashToArray({ a: 1, b: 2, c: 3, d: 4 }));
 // This code is not outputting as intended. Will need to review and return to it later.
 function combineData(hash, array) {
   let result = {};
-  for (let item in hash) {
-    let price = hash[item];
-    for (let element in array) {
-      let color = array[element].color;
-      let weight = array[element].weight;
+  for (let element in array) {
+    let color = array[element].color;
+    let weight = array[element].weight;
+    for (let item in hash) {
+      let price = hash[item];
       result[item] = { price, color, weight };
     }
   }
